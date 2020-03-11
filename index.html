@@ -35,23 +35,23 @@ if (hasGetUserMedia()) {
 
 <script>
   
-let video = document.querySelector('video');
+//let video = document.querySelector('video');
 
 //navigator.mediaDevices.getUserMedia(constraints).
   //then((stream) => {video.srcObject = stream});
 
 //let video = document.getElementById("videoInput"); // video is the id of video tag
-navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-    .then(function(stream) {
-       video.srcObject = stream;
-        video.play();
-    })
-    .catch(function(err) {
-        console.log("An error occurred! " + err);
-    });
+//navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+  //  .then(function(stream) {
+    //   video.srcObject = stream;
+      //  video.play();
+    //})
+    //.catch(function(err) {
+      //  console.log("An error occurred! " + err);
+    //});
   
  
-//let video = document.getElementById('videoInput');
+let video = document.getElementById('videoInput');
 let src = new cv.Mat(video.height, video.width, cv.CV_8UC4);
 let dst = new cv.Mat(video.height, video.width, cv.CV_8UC1);
 let cap = new cv.VideoCapture(video);
