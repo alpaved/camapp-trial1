@@ -37,18 +37,18 @@ if (hasGetUserMedia()) {
   
 let video = document.querySelector('video');
 
-navigator.mediaDevices.getUserMedia(constraints).
-  then((stream) => {video.srcObject = stream});
+//navigator.mediaDevices.getUserMedia(constraints).
+  //then((stream) => {video.srcObject = stream});
 
 //let video = document.getElementById("videoInput"); // video is the id of video tag
-//navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-  //  .then(function(stream) {
-    //   video.srcObject = stream;
-      //  video.play();
-    //})
-    //.catch(function(err) {
-      //  console.log("An error occurred! " + err);
-    //});
+navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+    .then(function(stream) {
+       video.srcObject = stream;
+        video.play();
+    })
+    .catch(function(err) {
+        console.log("An error occurred! " + err);
+    });
   
  
 //let video = document.getElementById('videoInput');
